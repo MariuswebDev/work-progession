@@ -4,3 +4,7 @@ function greet(name: string): string {
 
 const result = greet("mia");
 console.log(result);
+
+type Status = "active" | "inactive" | "pending";
+const state: Status = "active";
+console.log(state);
