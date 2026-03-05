@@ -1,5 +1,5 @@
 import "./App.css";
-import UserCard from "./week 1/mini-projects/user-card/UserCard";
+import UserCard from "./week 1/day 1/user-card/UserCard";
 
 function App() {
   return (
