@@ -1,6 +1,5 @@
 import type { JSX } from "react";
 import "./UserCard.css";
-
 interface UserInfo {
   id: number;
   avatar: string;
