@@ -4,7 +4,7 @@
 - Rendered it to the browser.
 
 * Today was not bad. If you're desperate enough to learn and become a confident fullstack developer,
-  you should be able to push continouously easily after compliting a project with what you've learned
+  you should be able to push continouously easily, especially after completing a project with what you've learned
   no matter how samll the project is
 
 * Tomorrrow I will be working on props and state management
