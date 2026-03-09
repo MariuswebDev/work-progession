@@ -1,21 +1,15 @@
-function List() {
-  const fruits = ["apple", "banana", "mango", "pear"];
-  const nums = [1, 2, 3, 4, 5, 6];
+import type { JSX } from "react";
+const List = (): JSX.Element => {
+  const fruits: string[] = ["apple", "pineapple", "mango", "pamplemouse"];
   return (
     <div>
-      <ol>
-        {fruits.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ol>
-
       <ul>
-        {nums.map((num) => (
-          <li key={num}>{num}</li>
+        {fruits.map((fruit: string) => (
+          <li key={fruit}>{fruit}</li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default List;
