@@ -1,10 +1,10 @@
 import "./App.css";
-import ButtonProps from "./week-1/day-2/ButtonProps";
+import { TodoApp } from "./week-1/mini-projects/Todo App/TodoApp";
 
 function App() {
   return;
   <>
-    <ButtonProps label={"Go"} variant={"primary"} />
+    <TodoApp />
   </>;
 }
 

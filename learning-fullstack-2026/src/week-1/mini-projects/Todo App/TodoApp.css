@@ -1,10 +1,226 @@
 body {
-  background-color: #1a1a1a;
+  background-color: #000;
+  font-family: cursive, sans-serif;
   color: wheat;
-  font-weight: bold;
-  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
 }
 
-button {
-  color: #1a1a1a;
+.todo-card {
+  background: #333;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.add-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-add {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-section span {
+  transition:
+    backrground 0.5s,
+    transform 0.5s;
+  padding: 5px 15px;
+  background: linear-gradient(360deg, mediumblue, midnightblue);
+  box-shadow: 2px 5px 10px rgba(4, 4, 65, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.filter-section {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-section span:active {
+  background: midnightblue;
+  box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  transform: scale(1);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputList {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.inputList:focus {
+  outline: none;
+}
+
+.addItem {
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #3c38;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.addItem:active {
+  box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.addItem:hover {
+  background: #33cc3367;
+}
+
+.delete-edit-section {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-remove {
+  cursor: pointer;
+  transition: transform 0.2s all;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: transform 0.5s ease;
+}
+
+.edit-remove:nth-child(1) {
+  background: #f1ee39;
+}
+
+.edit-remove:nth-child(2) {
+  background: #2cb2e7;
+}
+
+.edit-remove:hover {
+  transform: scale(1.1);
+}
+
+.edit-remove:active {
+  transform: scale(0.7);
+}
+
+.todos-section {
+  background-color: #0000007c;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 0 10px 0;
+}
+
+.item-check {
+  display: flex;
+  align-items: center;
+}
+
+.edit-button,
+.close-button {
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  background: linear-gradient(360deg, orange, salmon);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.5s ease;
+}
+
+.edit-button:hover {
+  background: linear-gradient(360deg, #ffa600d2, #fa8072cc);
+  transform: scale(1.07);
+}
+
+.edit-button:active {
+  transform: scale(0.9);
+}
+
+.close-button {
+  background: linear-gradient(360deg, indianred, coral);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+
+.close-button:hover {
+  transform: scale(1.07);
+}
+
+.close-button:active {
+  transform: scale(0.9);
+}
+
+.edit-modal {
+  padding: 10px;
+  width: 70%;
+}
+
+.edit-modal:focus {
+  outline: none;
+}
+
+.modal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  animation: modalApparition 0.5s;
+}
+
+@keyframes modalApparition {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  75% {
+    transform: translateY(100px);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
