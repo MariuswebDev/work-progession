@@ -75,7 +75,9 @@ export const TodoApp = () => {
                 placeholder="Enter a task..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter"}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") addTodo();
+                }}
               />
               <button className="addItem" onClick={addTodo}>
                 Add
